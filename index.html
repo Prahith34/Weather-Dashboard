@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+
+  <title>Frontend Mentor | Weather app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <a href="#main" class="visually-hidden skip-link">Skip to main content</a>
+
+  <header class="header wrapper">
+    <div class="header_content">
+      <a class="header_homelink" href="/">
+        <img class="header_logo" src="./assets/images/logo.svg" alt="Weather Now Logo" width="197" height="40">
+      </a>
+
+      <select class="dropdown header_dropdown" name="units" id="ddlunits">
+        <option value="">Units</option>
+        <option value="C">&deg;C</option>
+        <option value="F">&deg;F</option>
+      </select>
+    </div>  
+  </header>
+  
+  <main id="main" class="main wrapper">
+    <section class="hero wrapper">
+      <div class="hero_content">
+        <h1 class="hero_title">How's the sky looking today?</h1>
+
+        <div class="hero_search">
+          <input class="hero_textbox" type="text" name="search" id="txtSearch" placeholder="Search for a place....">
+          <button id="btnSearch" class="hero_button" type="submit">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="dashboard">
+      <section class="current">
+        <h2 class="visually-hidden">Current Location Temperature</h2>
+
+        <div class="current_content">
+          <div class="current_weather">
+            <div class="current_location">
+              <div id="dvCityCountry" class="current_city">Berlin, Germany</div>
+              <div id="dvCurrentDate" class="current_date">Monday, Dec 22, 2025</div>
+            </div>
+            <div class="current_info">
+              <img class="current_icon" src="./assets/images/icon-sunny.webp" alt="" width="320" height="320">
+              <div class="current_temp"><span id="dvCurrentTemp">20</span>&deg;</div>
+            </div>
+          </div>
+
+          <div class="current_conditions">
+            <div class="block current_condition">
+              <p class="current_condition_title">Feels Like</p>
+              <p class="current_condition_value"><span id="pFeelsLike"></span>&deg;</p>
+            </div>
+            <div class="block current_condition">
+              <p class="current_condition_title">Humidity</p>
+              <p class="current_condition_value"><span id="phumidity"></span>%</p>
+            </div>
+            <div class="block current_condition">
+              <p class="current_condition_title">Wind</p>
+              <p id="pWind" class="current_condition_value"></p>
+            </div>
+            <div class="block current_condition">
+              <p class="current_condition_title">Precipitation</p>
+              <p id="pPrecipitation" class="current_condition_value"></p>
+            </div>
+          </div>
+        </div>    
+      </section>
+
+      <section class="daily">
+        <h2 class="section_title daily_title">Daily forecast</h2>
+        <div class="daily_forecast">
+          <div id="dvForecastDay1" class="block daily_day">
+            <!-- <p class="daily_day_title"></p>
+            <img class="daily_day_icon" src="./assets/images/icon-rain.webp" alt="" width="320" height="320">
+            <div class="daily_day_temps">
+              <p class="daily_day_high">20&deg;</p>
+              <p class="daily_day_low">14&deg;</p>
+            </div> -->
+          </div>
+
+          <div id="dvForecastDay2" class="block daily_day"></div>
+          <div id="dvForecastDay3" class="block daily_day"></div>
+          <div id="dvForecastDay4" class="block daily_day"></div>
+          <div id="dvForecastDay5" class="block daily_day"></div>
+          <div id="dvForecastDay6" class="block daily_day"></div>
+          <div id="dvForecastDay7" class="block daily_day"></div>
+        </div>
+      </section>
+
+      <section class="hourly">
+        <div class="hourly_content">
+          <div class="hourly_header">
+            <h2 class="section_title hourly_title">Hourly Forecast</h2>
+            <select class="dropdown hourly_select" name="hourly_day" id="ddlDay">
+              <!-- <option class="hourly_select_day" value="">Tuesday</option> -->
+            </select>
+          </div>
+          <div class="hourly_hours">
+            <div id="dvForecastHour1" class="hourly_hour"></div>
+            <div id="dvForecastHour2" class="hourly_hour"></div>
+            <div id="dvForecastHour3" class="hourly_hour"></div>
+            <div id="dvForecastHour4" class="hourly_hour"></div>
+            <div id="dvForecastHour5" class="hourly_hour"></div>
+            <div id="dvForecastHour6" class="hourly_hour"></div>
+            <div id="dvForecastHour7" class="hourly_hour"></div>
+            <div id="dvForecastHour8" class="hourly_hour"></div>
+            <div id="dvForecastHour9" class="hourly_hour"></div>
+            <div id="dvForecastHour10" class="hourly_hour"></div>
+            <div id="dvForecastHour11" class="hourly_hour"></div>
+            <div id="dvForecastHour12" class="hourly_hour"></div>
+            <div id="dvForecastHour13" class="hourly_hour"></div>
+            <div id="dvForecastHour14" class="hourly_hour"></div>
+            <div id="dvForecastHour15" class="hourly_hour"></div>
+            <div id="dvForecastHour16" class="hourly_hour"></div>
+            <div id="dvForecastHour17" class="hourly_hour"></div>
+            <div id="dvForecastHour18" class="hourly_hour"></div>
+            <div id="dvForecastHour19" class="hourly_hour"></div>
+            <div id="dvForecastHour20" class="hourly_hour"></div>
+            <div id="dvForecastHour21" class="hourly_hour"></div>
+            <div id="dvForecastHour22" class="hourly_hour"></div>
+            <div id="dvForecastHour23" class="hourly_hour"></div>
+            <div id="dvForecastHour24" class="hourly_hour"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+  </main>
+
+</body>
+</html>
